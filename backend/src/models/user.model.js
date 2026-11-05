@@ -40,7 +40,7 @@ const userSchema = new Schema(
     if (!this.isModified("password")) return next();
     this.password = await bcrypt.hash(this.password, 10);
 
-    next();
+    next(); so i got an error with encrypt/hash part. so just delete next() and everything was fine
 });
 
 // compare passwords
